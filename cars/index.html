@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rogelio Romero">
+  <meta name="copyright" content="© 2025 AutoBlog MX">
+  <title>AutoBlog MX</title>
+
+  <!-- Fuentes y iconos -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar con links reales -->
+  <nav class="navbar">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/lambomx/photos/?locale=es_ES&_rdr" target="_blank"><i class="fa fa-facebook-official"></i></a>
+      <a href="https://www.instagram.com/bmw/" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@Lamborghini" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://x.com/lamborghini?lang=es" target="_blank"><i class="fa fa-twitter"></i></a>
+    </div>
+    <a href="https://www.lamborghini.com/es-en#val-ht" class="search"><i class="fa fa-search"></i></a>
+  </nav>
+
+  <!-- Header principal con carrusel -->
+  <header class="hero">
+    <div class="hero-carousel">
+      <div class="slide active">
+        <img src="img/4.jpg" alt="AutoBlog portada 1">
+        <div class="hero-content">
+          <h1>A U T O B L O G &nbsp; M X</h1>
+          <h6 style="background: rgba(0, 0, 0, 0.5);">Noticias, reseñas y <span>pasión por los autos</span></h6>
+          <button onclick="toggleModal('contacto')">CONTACTO</button>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img/1.jpg" alt="AutoBlog portada 2">
+        <div class="hero-content">
+          <h1>Experiencias Únicas</h1>
+          <h6 style="background: rgba(0, 0, 0, 0.5);">Lanzamientos y eventos exclusivos</h6>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img/3.jpg" alt="AutoBlog portada 3">
+        <div class="hero-content">
+          <h1>Velocidad y Estilo</h1>
+          <h6 style="background: rgba(0, 0, 0, 0.5);">El mundo motor como nunca lo viste</h6>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- Blog posts -->
+    <section class="blog">
+      <article>
+        <h3>Nuevo Ford Mustang 2025</h3>
+        <h5>Lanzamiento exclusivo <span>Mayo 2, 2025</span></h5>
+        <img src="img/1.jpg" alt="Mustang 2025">
+        <p>El ícono americano regresa renovado con un diseño más agresivo, tecnología híbrida y 500 caballos de potencia.</p>
+        <div class="actions">
+          <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+          <button onclick="toggleComments('coment1')">Comentarios <span>1</span></button>
+        </div>
+        <div id="coment1" class="comments">
+          <p>Juan: ¡Una bestia sobre ruedas! 🔥</p>
+        </div>
+      </article>
+
+      <article>
+        <h3>Tesla Cybertruck: ¿Revolución o exageración?</h3>
+        <h5>Opinión automotriz <span>Abril 23, 2025</span></h5>
+        <img src="img/3.jpg" alt="Tesla Cybertruck">
+        <p>Diseño futurista, potencia eléctrica y una promesa de cambiar la industria automotriz. ¿Será realmente el futuro de las pickups?</p>
+        <div class="actions">
+          <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+          <button onclick="toggleComments('coment2')">Comentarios <span>2</span></button>
+        </div>
+        <div id="coment2" class="comments">
+          <p>Ana: Se ve rarísimo pero me encanta 😍</p>
+          <p>Carlos: No lo compraría, prefiero lo clásico.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="card">
+        <img src="img/2.jpg" alt="Rogelio Romero">
+        <h4>Rogelio Romero</h4>
+        <p>Amante de los autos deportivos, la innovación tecnológica y todo lo relacionado con el mundo motor.</p>
+      </div>
+
+      <div class="card">
+        <h4>Suscríbete</h4>
+        <input type="email" placeholder="Ingresa tu correo">
+        <button onclick="toggleModal('contacto')">Suscribirme</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal -->
+  <div id="contacto" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal('contacto')">&times;</span>
+      <h2>Contáctame</h2>
+      <input type="email" placeholder="Ingresa tu correo">
+      <button onclick="toggleModal('contacto')">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <button onclick="scrollToTop()"><i class="fa fa-arrow-up"></i> Subir</button>
+    <p>© 2025 AutoBlog MX | Creado por Rogelio Romero</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
